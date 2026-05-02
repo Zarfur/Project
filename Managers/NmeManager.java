@@ -26,7 +26,9 @@ public class NmeManager {
         while(sc.hasNextLine()){
             // enemy name;health;attackRange;interval;attackMinimum;canHeal;hasHaste
             // String    ; int  ;   double  ; double ;   double    ;boolean;boolean
-            data.add(sc.nextLine().split(";"));
+            String[] info = sc.nextLine().split(";");
+            if(info[0].equals("iii")) continue;
+            data.add(info);
         }
         sc.close();
     }

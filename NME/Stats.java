@@ -14,8 +14,8 @@ public class Stats extends BaseTarget{
 
     public int getNRG(){return NRG;}
     public void setNRG(int a){NRG = a;}
-    public void incrementNRG(){NRG++;}
-    public void useNRG(int amount){NRG-=amount;}
+    public void incrementNRG(){NRG = Math.min(10, NRG+1);}
+    public void useNRG(int amount){Math.max(0, NRG-=amount);}
     public void initInventry(ArrayList<String> itms){
         inventry = itms;}
     public void addToInventry(String itm){

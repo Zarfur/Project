@@ -1,16 +1,16 @@
 Arrow of Healing;DMG;-15;true
-Dagger;DMG;5;true
-Lame Ball;DMG;6;false
-Vagnar's Staff of Warding;DMG;10;true
-Cool Ball;DMG;10;false
-Bomb;DMG;15;false
-The Holy Sword;DMG;17;true
-Spear;DMG;17;false
-Revolver;DMG;23;true
-Flaming Pitchfork;DMG;20;false
-Grenade;DMG;25;false
-Trident;DMG;30;false
-Artillery Shell;DMG;60;false
+Dagger;DMG;8;true
+Lame Ball;DMG;12;false
+Vagnar's Staff of Warding;DMG;20;true
+Cool Ball;DMG;22;false
+Bomb;DMG;25;false
+The Holy Sword;DMG;25;true
+Spear;DMG;28;false
+Revolver;DMG;33;true
+Flaming Pitchfork;DMG;35;false
+Grenade;DMG;35;false
+Trident;DMG;60;false
+Artillery Shell;DMG;120;false
 Scroll of The Fool;FOC;-2;false
 Vyzander's Staff of Foresight;FOC;1;true
 Pipe;FOC;1;false
