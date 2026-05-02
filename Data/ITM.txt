@@ -1,0 +1,29 @@
+Arrow of Healing;DMG;-15;true
+Dagger;DMG;5;true
+Lame Ball;DMG;6;false
+Vagnar's Staff of Warding;DMG;10;true
+Cool Ball;DMG;10;false
+Bomb;DMG;15;false
+The Holy Sword;DMG;17;true
+Spear;DMG;17;false
+The Empress;DMG;20;true
+Flaming Pitchfork;DMG;20;false
+Grenade;DMG;25;false
+Trident;DMG;30;false
+Artillery Shell;DMG;60;false
+Scroll of The Fool;FOC;-2;false
+Vyzander's Staff of Foresight;FOC;1;true
+Pipe;FOC;1;false
+Scroll of Suffering;FOC;1;false
+Orb of Crystals;FOC;2;false
+Rosary Bead;FOC;2;false
+Scroll of Knowledge;FOC;3;false
+Orb of Harming;HEA;-25;false
+Cheese Burger;HEA;8;false
+Vanushka's Staff of Growth;HEA;10;true
+Bandage;HEA;10;false
+Churro;HEA;12;false
+Shark Fin Soup;HEA;16;false
+Legendary Hero;HEA;45;false
+Orb of Healing;HEA;100;false
+Item of Stupidity;HEA;1;false

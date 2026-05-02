@@ -9,12 +9,12 @@ public class BaseTarget {
         attkRng = at;
         name = n;
     }
+
+    public String getName(){return name;}
+    public double getAttackRange(){return attkRng;}
     
     public void takeDmg(double dmg){
         health -= dmg;
-    }
-    public void dealDmg(BaseTarget target, double dmg){
-        target.takeDmg(dmg);
     }
     public double getHP(){return health;}
 }
