@@ -15,6 +15,7 @@ public class NmeManager {
     private Scanner sc;
     private NmeBase nmePicked;
     private Stats player;
+    private boolean isDummy = true;
 
     public NmeManager(Stats player) throws FileNotFoundException{
         this.player = player;
@@ -31,6 +32,7 @@ public class NmeManager {
     }
     public NmeBase pickNme(){
         String[] chosen = data.get(random.nextInt(data.size()));
+        if(isDummy){ chosen = data.get(0); isDummy = false;}
         String name = chosen[0];
         double health = Double.parseDouble(chosen[1]), attackRange = Double.parseDouble(chosen[2]),
                         attackMin = Double.parseDouble(chosen[4]);

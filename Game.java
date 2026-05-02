@@ -31,6 +31,8 @@ public class Game {
         Scanner file = new Scanner(new File("Data/ITM.txt"));
         while(file.hasNextLine())
             itemData.add(file.nextLine().split(";")[0]);
+        for(int j=0; j < 4;j++)
+            getItem();
         file.close();
         
     }
@@ -56,6 +58,7 @@ public class Game {
         turn++;
         System.out.println("\n\nTurn " + turn + " of Battle " + battle + " Against " + enemy.getName() + "\n");
         playerState();
+        if(enemy.getHP() <= 0) return;
         otherState();
     }
 
@@ -67,7 +70,7 @@ public class Game {
         while(turns > 0){
             System.out.println("\nPlay your turn!\n 1) go to inventory | 2) use NRG skills");
             System.out.printf("Current HP: %.1f%n", player.getHP());
-            System.out.println("Current Enemy HP: " + enemy.getHP());
+            System.out.println("Current " + enemy.getName() + " HP: " + enemy.getHP());
             System.out.println("Current NRG: " + player.getNRG() + "\n");
 
             int input = sc.nextInt();

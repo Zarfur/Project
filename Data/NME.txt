@@ -1,2 +1,8 @@
-enemy name; health; attackRange; interval; attackMinimum; canHeal; hasHaste
-Dummy;20;2;1000;1;false;false 
+enemy name ; health; attackRange ; interval ; attackMinimum ; canHeal ; hasHaste
+Dummy;20;2;800;1;false;true 
+Goblin;40;20;250;5;false;true
+Guard;60;25;500;5;false;false
+Jesuit;100;30;400;10;true;false
+Holy Guardsman;300;20;350;30;true;false
+Clergymen;250;10;100;20;true;true
+The Priest;450;60;300;0;true;true

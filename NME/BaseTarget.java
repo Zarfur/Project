@@ -14,7 +14,7 @@ public class BaseTarget {
     public double getAttackRange(){return attkRng;}
     
     public void takeDmg(double dmg){
-        health -= dmg;
+        health = Math.max(0, health - dmg);
     }
     public double getHP(){return health;}
 }

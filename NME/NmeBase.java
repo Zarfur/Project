@@ -13,6 +13,7 @@ public class NmeBase extends BaseTarget {
         super(n, h, attkRange);
         heal = canHeal;
         interval = i;
+        this.haste = haste;
         this.attkMin = attkMin;
         this.player = player;
     }
@@ -23,7 +24,10 @@ public class NmeBase extends BaseTarget {
 
     public void nmeTurn(){
         decision();
-        if(haste) decision();
+        if(haste) {
+            decision();
+            decision();
+        }
     }
 
     public void decision(){
@@ -34,7 +38,7 @@ public class NmeBase extends BaseTarget {
         switch(bound){
             case(2):
                 if(heal){
-                    int healAmount = random.nextInt((int) attkMin, (int) this.getAttackRange());
+                    int healAmount = random.nextInt((int) attkMin, (int) attkMin + (int) this.getAttackRange());
                     System.out.println(this.getName() + " healed " + healAmount + " health points!");
                     this.takeDmg(-healAmount);}
             break;
@@ -48,10 +52,10 @@ public class NmeBase extends BaseTarget {
     private volatile boolean endThread = false;
     private int index = 0, range = 10;
     public void runInterval(){
-        System.out.println("Click any button to block! Try to block as close to ZERO as possible.");
+        System.out.println("Click any BUTTON and then ENTER to block! Try to click ENTER as just as the counter hits ZERO!");
         Scanner hitCheck = new Scanner(System.in);
         endThread = false;
-        if(interval >= 0.7) range = 5;
+        if(interval >= 500) range = 5;
         Thread dodgeWindow = new Thread(() -> {
             for(index = range; index > -range; index--){
                 if(endThread) break;
@@ -65,21 +69,23 @@ public class NmeBase extends BaseTarget {
     dodgeWindow.start();
     String input = hitCheck.next();
     endThread = true;
-    handleDodges(index);
-
+    int currentIndex = index;
+    try { dodgeWindow.join();
+    } catch (InterruptedException e) {Thread.currentThread().interrupt();}
+    handleDodges(currentIndex);
     }
 
     public void handleDodges(int input){
-        double damage = random.nextInt((int) attkMin, (int) super.getAttackRange());
-        if(index == 0){
+        double damage = random.nextInt((int) attkMin, (int) super.getAttackRange() + (int) attkMin);
+        if(index == -1){
             damage = Math.max(0, damage/3 - 20);
             int ouch = random.nextInt(0, 5);
             this.takeDmg(ouch);
             System.out.println("Counter!");
             System.out.println(this.getName() + " took " + ouch + " damage from the counter!");
-        }else if(index <= 2 || index >= -2){
+        }else if(index <= 2 && index >= -3){
             System.out.println("Block!");
-            damage = damage/3;
+            damage = Math.max(0,damage/3 - 3);
         System.out.printf(" -%.1f hp!%n", damage);
         player.takeDmg(damage);
     }

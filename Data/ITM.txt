@@ -6,7 +6,7 @@ Cool Ball;DMG;10;false
 Bomb;DMG;15;false
 The Holy Sword;DMG;17;true
 Spear;DMG;17;false
-The Empress;DMG;20;true
+Revolver;DMG;23;true
 Flaming Pitchfork;DMG;20;false
 Grenade;DMG;25;false
 Trident;DMG;30;false
