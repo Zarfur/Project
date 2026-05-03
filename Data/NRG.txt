@@ -1,0 +1,14 @@
+"1) Bind | HEAL 10 hp | 2 FOC" +
+                            "\n2) Strike | ATTK 10 dmg | 3 FOC" +
+                            "\n3) Ouroborus | FOCUS 2 FOC | 2 FOC" + 
+                            "\n4) Planning | [???] | 4 FOC" +
+                            "\n5) The Flaming Brand | ATTK 40 dmg | 10 FOC" +
+                            "\n6) The Icey Brand | ATTK 12 dmg & HEAL 15 hp | 5 FOC");
+Quick Punch;DMG;NULL;5;0;2
+Quick Heal;HEA;NULL;5;0;3
+Bind;HEA;NULL;30;0;8
+Strike;DMG;NULL;10;0;3
+The Flaming Brand;DMG;NULL;40;0;10
+The Icey Brand;HEA;DMG;20;16;6
+Rejuvinate;HEA;NULL;99;0;20
+Invigorate;STR;

@@ -13,11 +13,11 @@ Trident;DMG;60;false
 Artillery Shell;DMG;120;false
 Scroll of The Fool;FOC;-2;false
 Vyzander's Staff of Foresight;FOC;1;true
-Pipe;FOC;1;false
-Scroll of Suffering;FOC;1;false
-Orb of Crystals;FOC;2;false
-Rosary Bead;FOC;2;false
-Scroll of Knowledge;FOC;3;false
+Pipe;FOC;3;false
+Scroll of Suffering;FOC;4;false
+Orb of Crystals;FOC;6;false
+Rosary Bead;FOC;6;false
+Scroll of Knowledge;FOC;10;false
 Orb of Harming;HEA;-25;false
 Cheese Burger;HEA;8;false
 Vanushka's Staff of Growth;HEA;10;true

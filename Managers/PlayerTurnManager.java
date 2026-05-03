@@ -70,10 +70,10 @@ public class PlayerTurnManager {
                     value *=2;
                     System.out.println("Critical hit!");}
                 System.out.println("Your " + itemData[0] + " dealt " + value + " damage!");
-                Nme.takeDmg(value); break;
+                player.takeDmg(value, Nme); break;
             case("HEA"):
                 System.out.println("You healed " + value +" HP with your " + itemData[0]);
-                player.takeDmg(-value); break;
+                player.takeDmg(-value, player); break;
             case("FOC"):
                 System.out.println("You gained " + value + " NRG using the " + itemData[0]);
                 player.useNRG(-1 * (int) value - 1);
@@ -101,27 +101,27 @@ public class PlayerTurnManager {
             case(1): 
                 if(player.getNRG() >= 2){doSomething = true;
                 System.out.println("You binded for 10 HP!");
-                player.takeDmg(-10); player.useNRG(2); break;}
+                player.takeDmg(-10, player); player.useNRG(2); break;}
             case(2): 
                 if(player.getNRG() >= 3){doSomething = true;
                 System.out.println("You striked the enemy for 10 DMG!");
-                nme.takeDmg(10); player.useNRG(3); break;}
+                player.takeDmg(10, nme); player.useNRG(3); break;}
             case(4): 
                 if(player.getNRG() >= 4){doSomething = true;
                 System.out.println("Your planning something...");
                 player.useNRG(4);
-                if(random.nextInt(2) == 0) nme.takeDmg(12);
-                if(random.nextInt(4) == 0) player.takeDmg(16);
-                if(random.nextInt(6) == 0) nme.takeDmg(16);
-                if(random.nextInt(2) == 0) player.takeDmg(-12); break;}
+                if(random.nextInt(2) == 0) player.takeDmg(12, nme);
+                if(random.nextInt(4) == 0) player.takeDmg(16, player);
+                if(random.nextInt(6) == 0) player.takeDmg(16, nme);
+                if(random.nextInt(2) == 0) player.takeDmg(-12, player); break;}
             case(5): 
                 if(player.getNRG() >= 10){doSomething = true;
                 System.out.println("You use the Grand Brand to imbue the enemy with FLAME!");
-                nme.takeDmg(44); player.useNRG(10); break;}
+                player.takeDmg(44, nme); player.useNRG(10); break;}
             case(6):
                 if(player.getNRG() >= 5){doSomething = true;
                 System.out.println("You use the Grand Brand to imbue yourself with HEALTH at the cost of the enemies WARMTH!");
-                nme.takeDmg(12); player.takeDmg(-12); player.useNRG(5); break;}
+                player.takeDmg(12, nme); player.takeDmg(-12, player); player.useNRG(5); break;}
             case(3): default:
                 if(player.getNRG() >= 2){doSomething = true;
                 System.out.println("The cycle continues..."); break;}
